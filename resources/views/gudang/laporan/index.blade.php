@@ -110,7 +110,7 @@
                         @empty
                         <tr>
                             <td colspan="7" class="px-4 py-8 text-center text-gray-400 text-sm">
-                                Tidak ada transaksi pada rentang tanggal ini.
+                                Tidak ada transaksi pada rentang tanggal ini
                             </td>
                         </tr>
                         @endforelse
