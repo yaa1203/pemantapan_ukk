@@ -44,6 +44,11 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('/geray', GeraiController::class);
         Route::resource('/suppliers', SupplierController::class);
         Route::resource('/distribusi', DistribusiController::class);
+        Route::resource('stok-masuk', App\Http\Controllers\StokMasukController::class);
+        Route::resource('stok-keluar', App\Http\Controllers\StokKeluarController::class);
+
+        Route::get('laporan', [App\Http\Controllers\LaporanGudangController::class, 'index'])
+            ->name('laporan-gudang.index');
     });
 
 

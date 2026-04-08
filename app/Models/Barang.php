@@ -31,4 +31,13 @@ class Barang extends Model
     {
         return $this->hasMany(Transaksi::class);
     }
+    public function stokMasuks()
+    {
+        return $this->hasMany(StokMasuk::class);
+    }
+
+    public function stokKeluars()
+    {
+        return $this->hasMany(StokKeluar::class);
+    }
 }

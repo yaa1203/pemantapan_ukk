@@ -26,22 +26,18 @@
         </div>
 
         {{-- Stat Cards --}}
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-500 mb-1">Total Supplier</p>
-                <p class="text-2xl font-semibold text-gray-800">{{ $totalSupplier }}</p>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-500 mb-1">Total Gerai</p>
-                <p class="text-2xl font-semibold text-gray-800">{{ $totalGerai }}</p>
-            </div>
+        <div class="grid grid-cols-3 gap-4">
             <div class="bg-gray-50 rounded-xl p-4">
                 <p class="text-xs text-gray-500 mb-1">Total Barang</p>
                 <p class="text-2xl font-semibold text-gray-800">{{ $totalBarang }}</p>
             </div>
             <div class="bg-gray-50 rounded-xl p-4">
-                <p class="text-xs text-gray-500 mb-1">Distribusi</p>
-                <p class="text-2xl font-semibold text-gray-800">{{ $totalDistribusi }}</p>
+                <p class="text-xs text-gray-500 mb-1">Stok Masuk</p>
+                <p class="text-2xl font-semibold text-gray-800">{{ $totalStokMasuk }}</p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4">
+                <p class="text-xs text-gray-500 mb-1">Stok Keluar</p>
+                <p class="text-2xl font-semibold text-gray-800">{{ $totalStokKeluar }}</p>
             </div>
         </div>
 

@@ -20,10 +20,9 @@ class DashboardController extends Controller
     public function indexGudang()
     {
         return view('gudang.dashboard', [
-            'totalSupplier'   => \App\Models\Supplier::count(),
-            'totalGerai'      => \App\Models\Gerai::count(),
             'totalBarang'     => \App\Models\Barang::count(),
-            'totalDistribusi' => \App\Models\Distribusi::count(),
+            'totalStokMasuk'  => \App\Models\StokMasuk::count(),
+            'totalStokKeluar' => \App\Models\StokKeluar::count(),
         ]);
     }
 }
