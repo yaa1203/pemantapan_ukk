@@ -6,6 +6,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\GeraiController;
 use App\Http\Controllers\DistribusiController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -24,9 +25,7 @@ Route::middleware(['auth'])->group(function () {
 
     // 👑 ADMIN
     Route::middleware(['role:admin'])->group(function () {
-        Route::get('/admin', function () {
-            return view('admin.dashboard');
-        });
+        Route::get('/admin', [DashboardController::class, 'indexAdmin']);
 
         Route::resource('/supplier', SupplierController::class);
         Route::resource('/gerai', GeraiController::class);
@@ -38,9 +37,7 @@ Route::middleware(['auth'])->group(function () {
 
     // 📦 GUDANG
     Route::middleware(['role:gudang'])->group(function () {
-        Route::get('/gudang', function () {
-            return view('gudang.dashboard');
-        });
+        Route::get('/gudang', [DashboardController::class, 'indexGudang']);
 
         Route::resource('/barang', BarangController::class);
         Route::get('/barang/edit/{id}', [BarangController::class, 'edit']); 
